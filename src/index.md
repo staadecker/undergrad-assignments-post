@@ -15,7 +15,7 @@ This post is exciting to me because it is the first where I've used some fancy s
     Specifically, this website is built with ObservableHQ Framework and uses D3 and ObservableHQ Plot to make
     the plots! All my code is public on [GitHub](https://github.com/staadecker/undergrad-assignments-post)
 
-[^3]: Turns out making custom plots and interactive websites takes A LOT of time, especially on your first time. I had great ambitions to make smooth animations and insightful hover states! You could've explored the data yourself and gawked at the beautiful transitions!! But alas... I hope you nonetheless find my imperfect plots fun!
+[^3]: Turns out making custom plots and interactive websites takes A LOT of time, especially since it was my first time. I had grand ambitions to make smooth animations and insightful hover states! You could've explored the data yourself and gawked at the [illuminating transitions](http://vis.berkeley.edu/papers/animated_transitions/)!! But alas... I hope you nonetheless find my far-from-perfect plots fun!
 
 ## What types of courses do engineers take?
 
@@ -25,7 +25,7 @@ I categorized all 46 of my courses by their focus:
 import { pieChart } from "./components/pieChart.js";
 
 const color_map = {
-  "Engineering: Fundementals": "#42b8f7",
+  "Engineering: Fundamentals": "#42b8f7",
   "Engineering: Energy Systems": "#42f781",
   "Engineering: Projects": "#42f7dc",
   Math: "#f7a942",
@@ -33,7 +33,7 @@ const color_map = {
   Other: "#7F7F7F",
 };
 const name_map = {
-  "Eng Fund.": "Engineering: Fundementals",
+  "Eng Fund.": "Engineering: Fundamentals",
   Project: "Engineering: Projects",
   "Eng Spec.": "Engineering: Energy Systems",
   "Other (technical)": "Other",
@@ -64,7 +64,7 @@ As shown, half the courses are engineering-centric courses. A quarter are math o
 
 I found the clear-cut distinction between courses to be striking. Of course, there's overlap — engineering courses use math and math courses try to use engineering examples — but nearly all courses have a distinct _focus_. I suppose this is to be expected given the university education model. Professors teach courses in which they have research expertise, so courses must be specific to a topic. Yet, I wonder if this model is best for student learning[^4]. Would an integrated single-course curriculum not give students a richer understanding of their field and the tools to bridge knowledge from one topic to the next?
 
-[^4]: Not that maximizing student learning is a particularily important consideration in universities' business model.
+[^4]: Not that maximizing student learning is the foremost concern of the university's business model.
 
 Below is the breakdown of course types by year (or semester, try the toggle!).
 
@@ -120,7 +120,7 @@ Plot.plot({
 })
 ```
 
-As shown, my Engineering Science program had a unique '2+2' structure. The first two years are heavy in math, science, and fundemental engineering courses. The last two years students specialize in a major (I chose Energy Systems Engineering) and get to take more electives. I found that spending two years on fundementals was incredibly valuable. Most engineering programs jump into their specialization after just one year.
+As shown, my Engineering Science program had a unique '2+2' structure. The first two years are heavy in math, science, and fundamental engineering courses. The last two years students specialize in a major (I chose Energy Systems Engineering) and get to take more electives. I found that spending two years on fundamentals was incredibly valuable. Most engineering programs jump into their specialization after just one year.
 
 ## What types of assignments do engineers do?
 
@@ -171,13 +171,13 @@ const weighted = view(
 )
 ```
 
-Aha, over half of my grade was determined from exam and test marks only. All those quizzes and problem sets made up less than 10% of my grade!
+Aha, over half of my grade was determined by my exam and test marks only. All those quizzes and problem sets made up less than 10% of my grade!
 
-There's often debate about how many assignments should involve group work or how much final exams should count for. In my biased opinion, I'd say the current mix is about right, except that I think more than just 9% of one's grade should come from written assignments. I don't think Engineers get enough training in how to write well.
+There's often debate about how many assignments should involve group work or how much final exams should count for. In my biased opinion, I'd say the current mix is about right, except that I think more than just 9% of one's grade should come from written assignments. I don't think engineers get enough training in how to write well.
 
 # How do assignments differ by course type?
 
-Finally, I wanted to know if certain assignment types (say group projects) were being used overwelmingly in one type of course. The plot below shows what types of assignments make up the grades in each course type.
+Finally, I wanted to know if certain assignment types (say group projects) were being used overwhelmingly in one type of course. The plot below shows what types of assignments make up the grades in each course type.
 
 ```js
 Plot.plot({
@@ -204,21 +204,21 @@ Plot.plot({
 })
 ```
 
-As shown, group projects and written assignments make up a significant part of the grade in humanities-like and engineering project centric courses, but virtually no others. Is it that engineering and math courses especially do not lend themselves well to group work or writting? Or is it perhaps that, grading group projects and essays is more time consuming and hence avoided when possible?
+As shown, group projects and written assignments make up a significant part of the grade in humanities-like and engineering project centric courses, but virtually no others. Is it that engineering and math courses especially do not lend themselves well to group work and writing? Or is it perhaps that grading group projects and essays is more time consuming and hence avoided when possible?
 
 ## Final thoughts
 
-There's a lot more I would've liked to discuss, including insights on how _I_ perform rather than just what types of assignments and courses engineering students take. (Spoiler: I did best on problem sets, labs, and fundemental engineering courses while I did worst on exams, tests, group projects, and humanities-like courses, although maybe that is just because the grading one the later is stiffer?)
+There's a lot more I would've liked to discuss, including insights on how _I_ perform rather than just what types of assignments and courses engineering students take. (Spoiler: I did best on problem sets, labs, and fundamental engineering courses while I did worst on exams, tests, group projects, and humanities-like courses, although maybe that is just because the grading one the later is stiffer?)
 
-There is also the sought-after question of how big is the curve? Unfortunately, professors rarely share the final exam grades (or sometimes include the curve directly in the exam grade) so it is often impossible to answer the question precisely. Still, in the 11 courses where I could make an estimate, my final grade was 0 to 12% higher than expected due to the curve[^5].
+There is also the sought-after question of how big is the curve? Unfortunately, professors rarely share the final exam grades (or sometimes include the curve directly in the exam grade) so it is often impossible to answer the question precisely. Still, in the 11 courses where I could make an estimate, my final grade was 0 to 12% higher than expected due to the curve[^5] (median of 2%).
 
 [^5]: The 12% curve was in Prof. Davis' infamous Calculus 1!
 
 ## Appendix: Methodology
 
-All researchers dream of a day where their data will be orderly, clean and free of inconsistencies or edge cases.
-I have yet to experience this day. Instead, I spent several hours transcribing all my data into two neat tables shown below.
+I dream of the day where my data will be orderly, clean and free of inconsistencies or edge cases.
+Unfortunately, I have not experienced such a day. I spent several hours transcribing all my data into the two neat tables shown below.
 
 ![Screenshot of the two tables that form the dataset](./data/input_tables_blurred.png)
 
-From there, I analyzed my data mostly in Google Sheets before creating my desired plots in an ObservableHQ Notebook using D3 and Observable Plot. Maybe some day I'll try out Vega and Vega-lite too :)
+From there, I analyzed my data mostly in Google Sheets before creating my desired plots in an ObservableHQ Notebook using D3 and Observable Plot. Maybe some day I'll try out Vega and Vega-lite too!
