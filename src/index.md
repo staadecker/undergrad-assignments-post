@@ -1,111 +1,224 @@
 ---
-toc: false
+style: style.css
 ---
 
-<div class="hero">
-  <h1>undergrad-grades</h1>
-  <h2>Welcome to your new app! Edit&nbsp;<code style="font-size: 90%;">src/index.md</code> to change this page.</h2>
-  <a href="https://observablehq.com/framework/getting-started">Get started<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
-</div>
+# Analyzing 443 Engineering Assignments
 
-<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "Your awesomeness over time 🚀",
-      subtitle: "Up and to the right!",
-      width,
-      y: {grid: true, label: "Awesomeness"},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
-      ]
-    }))
-  }</div>
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "How big are penguins, anyway? 🐧",
-      width,
-      grid: true,
-      x: {label: "Body mass (g)"},
-      y: {label: "Flipper length (mm)"},
-      color: {legend: true},
-      marks: [
-        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
-        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
-      ]
-    }))
-  }</div>
-</div>
+It recently dawned on me that I own an interesting dataset: my grades spreadsheet from my four-year undergrad at the University of Toronto.
+Like many students, I kept a record of each assignment, its weight, and my grade
+so that when exam time rolled around I knew where I stood and where I should focus my efforts.
+This spreadsheet contains 46 classes, 443 assignments and some interesting trends.
 
----
+This post is exciting to me because it is the first where I've used some fancy software[^2] to make custom plots with interactive buttons! One of my 2024 goals was to "Build an explorable" — a type of website that uses interactive elements to aid comprehension. This post is as close as I'll get to accomplishing that goal[^3].
 
-## Next steps
+[^2]:
+    Specifically, this website is built with ObservableHQ Framework and uses D3 and ObservableHQ Plot to make
+    the plots! All my code is public on [GitHub](https://github.com/staadecker/undergrad-assignments-post)
 
-Here are some ideas of things you could try…
+[^3]: Turns out making custom plots and interactive websites takes A LOT of time, especially on your first time. I had great ambitions to make smooth animations and insightful hover states! You could've explored the data yourself and gawked at the beautiful transitions!! But alas... I hope you nonetheless find my imperfect plots fun!
 
-<div class="grid grid-cols-4">
-  <div class="card">
-    Chart your own data using <a href="https://observablehq.com/framework/lib/plot"><code>Plot</code></a> and <a href="https://observablehq.com/framework/files"><code>FileAttachment</code></a>. Make it responsive using <a href="https://observablehq.com/framework/javascript#resize(render)"><code>resize</code></a>.
-  </div>
-  <div class="card">
-    Create a <a href="https://observablehq.com/framework/project-structure">new page</a> by adding a Markdown file (<code>whatever.md</code>) to the <code>src</code> folder.
-  </div>
-  <div class="card">
-    Add a drop-down menu using <a href="https://observablehq.com/framework/inputs/select"><code>Inputs.select</code></a> and use it to filter the data shown in a chart.
-  </div>
-  <div class="card">
-    Write a <a href="https://observablehq.com/framework/loaders">data loader</a> that queries a local database or API, generating a data snapshot on build.
-  </div>
-  <div class="card">
-    Import a <a href="https://observablehq.com/framework/imports">recommended library</a> from npm, such as <a href="https://observablehq.com/framework/lib/leaflet">Leaflet</a>, <a href="https://observablehq.com/framework/lib/dot">GraphViz</a>, <a href="https://observablehq.com/framework/lib/tex">TeX</a>, or <a href="https://observablehq.com/framework/lib/duckdb">DuckDB</a>.
-  </div>
-  <div class="card">
-    Ask for help, or share your work or ideas, on our <a href="https://github.com/observablehq/framework/discussions">GitHub discussions</a>.
-  </div>
-  <div class="card">
-    Visit <a href="https://github.com/observablehq/framework">Framework on GitHub</a> and give us a star. Or file an issue if you’ve found a bug!
-  </div>
-</div>
+## What types of courses do engineers take?
 
-<style>
+I categorized all 46 of my courses by their focus:
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--sans-serif);
-  margin: 4rem 0 8rem;
-  text-wrap: balance;
-  text-align: center;
-}
+```js
+import { pieChart } from "./components/pieChart.js";
 
-.hero h1 {
-  margin: 1rem 0;
-  padding: 1rem 0;
-  max-width: none;
-  font-size: 14vw;
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+const color_map = {
+  "Engineering: Fundementals": "#42b8f7",
+  "Engineering: Energy Systems": "#42f781",
+  "Engineering: Projects": "#42f7dc",
+  Math: "#f7a942",
+  Science: "#f74e42",
+  Other: "#7F7F7F",
+};
+const name_map = {
+  "Eng Fund.": "Engineering: Fundementals",
+  Project: "Engineering: Projects",
+  "Eng Spec.": "Engineering: Energy Systems",
+  "Other (technical)": "Other",
+  "Other (humanities)": "Other",
+};
+let data = await FileAttachment("./data/courses.tsv").tsv({ typed: true });
+data = data.map((e) => ({
+  ...e,
+  type: name_map[e.Type] || e.Type,
+  Type: undefined,
+}));
 
-.hero h2 {
-  margin: 0;
-  max-width: 34em;
-  font-size: 20px;
-  font-style: initial;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--theme-foreground-muted);
-}
+let donut_data = Object.entries(
+  data.reduce((acc, obj) => {
+    const key = obj.type;
+    acc[key] = (acc[key] || 0) + 1;
+    return acc;
+  }, {})
+).map(([key, count]) => ({ name: key, value: count }));
+donut_data = d3.sort(donut_data, (o) => Object.keys(color_map).indexOf(o.name));
+```
 
-@media (min-width: 640px) {
-  .hero h1 {
-    font-size: 90px;
+```js
+pieChart({ data: donut_data, percent: false, width, color_map })
+```
+
+As shown, half the courses are engineering-centric courses. A quarter are math or science courses. The remaining quarter fall into the "Other" category and include electives like economics or humanities-like courses I took (rhetoric, ethics, leadership, etc.).
+
+I found the clear-cut distinction between courses to be striking. Of course, there's overlap — engineering courses use math and math courses try to use engineering examples — but nearly all courses have a distinct _focus_. I suppose this is to be expected given the university education model. Professors teach courses in which they have research expertise, so courses must be specific to a topic. Yet, I wonder if this model is best for student learning[^4]. Would an integrated single-course curriculum not give students a richer understanding of their field and the tools to bridge knowledge from one topic to the next?
+
+[^4]: Not that maximizing student learning is a particularily important consideration in universities' business model.
+
+Below is the breakdown of course types by year (or semester, try the toggle!).
+
+```js
+const data_transformed = data.map((row) => {
+  const term = row.Term;
+  let label = "Y" + Math.floor((term + 1) / 2).toString();
+  if (breakdown == "term") {
+    if (term % 2 == 0) {
+      label += " Spring";
+    } else {
+      label += " Fall";
+    }
   }
-}
+  return { ...row, Term: label };
+});
+```
 
-</style>
+```js
+const breakdown = view(
+  Inputs.radio(
+    new Map([
+      ["Year", "year"],
+      ["Semester", "term"],
+    ]),
+    { label: "Breakdown by: ", value: "year" }
+  )
+)
+```
+
+```js
+Plot.plot({
+  color: {
+    legend: true,
+    type: "categorical",
+    range: Object.values(color_map),
+    domain: Object.keys(color_map),
+  },
+  x: { type: "band", label: null },
+  y: {
+    label: "Number of courses",
+    domain: [0, breakdown == "term" ? 6 : 12],
+    interval: 1,
+    tickFormat: ".0f",
+  },
+  marks: [
+    Plot.barY(data_transformed, {
+      ...Plot.groupX({ y: "count" }, { x: "Term", fill: "type", tip: true }),
+      order: Object.keys(color_map),
+    }),
+    Plot.ruleY([0]),
+  ],
+})
+```
+
+As shown, my Engineering Science program had a unique '2+2' structure. The first two years are heavy in math, science, and fundemental engineering courses. The last two years students specialize in a major (I chose Energy Systems Engineering) and get to take more electives. I found that spending two years on fundementals was incredibly valuable. Most engineering programs jump into their specialization after just one year.
+
+## What types of assignments do engineers do?
+
+I gave all 443 assignments a label describing their type, from exams and tests to problem sets and labs.
+
+```js
+const detailed_data = (
+  await FileAttachment("./data/data_detailed.tsv").tsv({ typed: true })
+).map((e) => {
+  return { ...e, type: name_map[e.Type] || e.Type, Type: undefined };
+});
+
+const total = weighted ? d3.sum(detailed_data, (o) => o.weight) : 1;
+const threshold = weighted ? 0.03 : 15;
+
+// Group by `a_type` and compute proportions
+const groupedData = Array.from(
+  d3.rollup(
+    detailed_data,
+    (v) => d3.sum(v, (d) => (weighted ? d.weight : 1)) / total,
+    (d) => d.a_type
+  ),
+  ([name, value]) => ({ name, value })
+);
+
+// Map small values to "Other"
+const aggregatedData = Array.from(
+  d3.rollup(
+    groupedData,
+    (v) => d3.sum(v, (d) => d.value),
+    (d) => (d.value >= threshold ? d.name : "Other")
+  ),
+  ([name, value]) => ({ name, value })
+);
+```
+
+```js
+pieChart({ data: aggregatedData, percent: weighted, width, color_map })
+```
+
+At first, it seems that there's a pretty even mix across all assignment types. To think that I wrote
+84 quizzes and 72 problem sets is a bit scary! But now try checking the box below to see which assignments
+most contributed to my grade.
+
+```js
+const weighted = view(
+  Inputs.toggle({ label: "Adjust for assignments' weight" })
+)
+```
+
+Aha, over half of my grade was determined from exam and test marks only. All those quizzes and problem sets made up less than 10% of my grade!
+
+There's often debate about how many assignments should involve group work or how much final exams should count for. In my biased opinion, I'd say the current mix is about right, except that I think more than just 9% of one's grade should come from written assignments. I don't think Engineers get enough training in how to write well.
+
+# How do assignments differ by course type?
+
+Finally, I wanted to know if certain assignment types (say group projects) were being used overwelmingly in one type of course. The plot below shows what types of assignments make up the grades in each course type.
+
+```js
+Plot.plot({
+  color: { legend: true, scheme: "Observable10" },
+  y: { type: "band", label: "Course type" },
+  x: { label: "Grade composition", tickFormat: "%" },
+  marks: [
+    Plot.barX(
+      detailed_data,
+      Plot.groupY(
+        { x: "sum" },
+        {
+          y: "c_type",
+          fill: "a_type",
+          tip: true,
+          offset: "normalize",
+          x: "weight",
+        }
+      )
+    ),
+    Plot.ruleX([0]),
+  ],
+  marginLeft: 100,
+})
+```
+
+As shown, group projects and written assignments make up a significant part of the grade in humanities-like and engineering project centric courses, but virtually no others. Is it that engineering and math courses especially do not lend themselves well to group work or writting? Or is it perhaps that, grading group projects and essays is more time consuming and hence avoided when possible?
+
+## Final thoughts
+
+There's a lot more I would've liked to discuss, including insights on how _I_ perform rather than just what types of assignments and courses engineering students take. (Spoiler: I did best on problem sets, labs, and fundemental engineering courses while I did worst on exams, tests, group projects, and humanities-like courses, although maybe that is just because the grading one the later is stiffer?)
+
+There is also the sought-after question of how big is the curve? Unfortunately, professors rarely share the final exam grades (or sometimes include the curve directly in the exam grade) so it is often impossible to answer the question precisely. Still, in the 11 courses where I could make an estimate, my final grade was 0 to 12% higher than expected due to the curve[^5].
+
+[^5]: The 12% curve was in Prof. Davis' infamous Calculus 1!
+
+## Appendix: Methodology
+
+All researchers dream of a day where their data will be orderly, clean and free of inconsistencies or edge cases.
+I have yet to experience this day. Instead, I spent several hours transcribing all my data into two neat tables shown below.
+
+![Screenshot of the two tables that form the dataset](./data/input_tables_blurred.png)
+
+From there, I analyzed my data mostly in Google Sheets before creating my desired plots in an ObservableHQ Notebook using D3 and Observable Plot. Maybe some day I'll try out Vega and Vega-lite too :)

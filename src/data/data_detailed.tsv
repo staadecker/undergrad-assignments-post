@@ -1,0 +1,444 @@
+a_type	c_type	weight
+Other	Project	0.01
+Group projects	Project	0.05
+Group projects	Project	0.18
+Group projects	Project	0.10
+Other	Project	0.01
+Group projects	Project	0.10
+Papers	Project	0.10
+Tests	Project	0.15
+Exams	Project	0.30
+Other	Math	0.10
+Tests	Math	0.10
+Tests	Math	0.30
+Exams	Math	0.50
+Labs	Engineering	0.02
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.06
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Tests	Engineering	0.15
+Tests	Engineering	0.15
+Exams	Engineering	0.50
+Tests	Math	0.15
+Tests	Math	0.15
+Exams	Math	0.50
+Quizzes	Math	0.03
+Quizzes	Math	0.00
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Quizzes	Math	0.00
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Quizzes	Math	0.00
+Group projects	Engineering	0.05
+Group projects	Engineering	0.05
+Exams	Engineering	0.50
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.00
+Problem sets	Engineering	0.00
+Problem sets	Engineering	0.00
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.00
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.00
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.04
+Quizzes	Engineering	0.00
+Quizzes	Science	0.04
+Quizzes	Science	0.04
+Quizzes	Science	0.04
+Quizzes	Science	0.04
+Quizzes	Science	0.04
+Quizzes	Science	0.00
+Labs	Science	0.04
+Labs	Science	0.04
+Labs	Science	0.04
+Labs	Science	0.00
+Labs	Science	0.04
+Labs	Science	0.04
+Tests	Science	0.20
+Exams	Science	0.40
+Other	Engineering	0.10
+Labs	Engineering	0.02
+Labs	Engineering	0.02
+Labs	Engineering	0.02
+Labs	Engineering	0.02
+Labs	Engineering	0.02
+Tests	Engineering	0.35
+Quizzes	Engineering	0.01
+Quizzes	Engineering	0.01
+Quizzes	Engineering	0.01
+Quizzes	Engineering	0.01
+Quizzes	Engineering	0.01
+Quizzes	Engineering	0.01
+Quizzes	Engineering	0.01
+Exams	Engineering	0.35
+Group projects	Project	0.10
+Group projects	Project	0.25
+Group projects	Project	0.05
+Group projects	Project	0.10
+Group projects	Project	0.10
+Papers	Project	0.05
+Papers	Project	0.25
+Other	Project	0.01
+Other	Project	0.03
+Group projects	Project	0.06
+Quizzes	Math	0.04
+Quizzes	Math	0.04
+Quizzes	Math	0.04
+Quizzes	Math	0.04
+Quizzes	Math	0.00
+Quizzes	Math	0.00
+Quizzes	Math	0.04
+Tests	Math	0.30
+Exams	Math	0.50
+Labs	Engineering	0.03
+Labs	Engineering	0.00
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.06
+Labs	Engineering	0.00
+Tests	Engineering	0.15
+Tests	Engineering	0.15
+Exams	Engineering	0.55
+Tests	Math	0.20
+Tests	Math	0.20
+Exams	Math	0.55
+Problem sets	Math	0.01
+Problem sets	Math	0.01
+Problem sets	Math	0.01
+Problem sets	Math	0.01
+Problem sets	Math	0.01
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Problem sets	Science	0.03
+Tests	Science	0.38
+Papers	Science	0.30
+Quizzes	Science	0.08
+Tests	Engineering	0.24
+Tests	Engineering	0.24
+Labs	Engineering	0.07
+Labs	Engineering	0.05
+Exams	Engineering	0.40
+Other	Math	0.05
+Labs	Math	0.15
+Tests	Math	0.15
+Tests	Math	0.20
+Tests	Math	0.20
+Exams	Math	0.25
+Labs	Engineering	0.05
+Labs	Engineering	0.05
+Tests	Engineering	0.15
+Tests	Engineering	0.30
+Tests	Engineering	0.15
+Exams	Engineering	0.30
+Papers	Humanities	0.10
+Papers	Humanities	0.10
+Group projects	Humanities	0.10
+Other	Humanities	0.20
+Tests	Humanities	0.20
+Exams	Humanities	0.30
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Labs	Science	0.02
+Labs	Science	0.06
+Labs	Science	0.12
+Papers	Science	0.30
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Labs	Engineering	0.03
+Tests	Engineering	0.20
+Tests	Engineering	0.20
+Exams	Engineering	0.36
+Other	Science	0.12
+Other	Science	0.08
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Tests	Science	0.25
+Exams	Science	0.35
+Quizzes	Science	0.10
+Quizzes	Science	0.00
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Quizzes	Science	0.10
+Papers	Science	0.30
+Labs	Science	0.20
+Problem sets	Math	0.15
+Tests	Math	0.20
+Tests	Math	0.30
+Exams	Math	0.35
+Quizzes	Other	0.01
+Quizzes	Other	0.00
+Quizzes	Other	0.01
+Quizzes	Other	0.01
+Quizzes	Other	0.00
+Quizzes	Other	0.01
+Quizzes	Other	0.01
+Quizzes	Other	0.01
+Quizzes	Other	0.01
+Quizzes	Other	0.01
+Group projects	Other	0.20
+Tests	Other	0.20
+Tests	Other	0.20
+Exams	Other	0.30
+Tests	Science	0.30
+Tests	Science	0.30
+Exams	Science	0.40
+Papers	Humanities	0.15
+Group projects	Humanities	0.12
+Group projects	Humanities	0.18
+Papers	Humanities	0.15
+Papers	Humanities	0.02
+Papers	Humanities	0.02
+Papers	Humanities	0.02
+Papers	Humanities	0.02
+Papers	Humanities	0.02
+Other	Humanities	0.10
+Papers	Humanities	0.20
+Labs	Engineering	0.03
+Labs	Engineering	0.01
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Quizzes	Engineering	0.05
+Quizzes	Engineering	0.00
+Quizzes	Engineering	0.05
+Quizzes	Engineering	0.05
+Quizzes	Engineering	0.05
+Tests	Engineering	0.20
+Exams	Engineering	0.40
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Quizzes	Engineering	0.07
+Quizzes	Engineering	0.00
+Quizzes	Engineering	0.03
+Quizzes	Engineering	0.07
+Quizzes	Engineering	0.07
+Quizzes	Engineering	0.07
+Exams	Engineering	0.50
+Problem sets	Math	0.18
+Quizzes	Math	0.00
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Quizzes	Math	0.03
+Other	Math	0.02
+Other	Math	0.03
+Tests	Math	0.25
+Exams	Math	0.40
+Group projects	Project	0.32
+Group projects	Project	0.01
+Papers	Project	0.06
+Group projects	Project	0.30
+Papers	Project	0.10
+Other	Project	0.02
+Other	Project	0.04
+Other	Project	0.15
+Other	Humanities	0.05
+Papers	Humanities	0.03
+Papers	Humanities	0.04
+Other	Humanities	0.03
+Papers	Humanities	0.05
+Other	Humanities	0.05
+Other	Humanities	0.10
+Tests	Humanities	0.15
+Group projects	Humanities	0.10
+Group projects	Humanities	0.10
+Other	Humanities	0.05
+Exams	Humanities	0.25
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Labs	Engineering	0.10
+Labs	Engineering	0.10
+Tests	Engineering	0.25
+Exams	Engineering	0.45
+Papers	Humanities	0.15
+Tests	Humanities	0.10
+Tests	Humanities	0.10
+Group projects	Humanities	0.14
+Other	Humanities	0.01
+Other	Humanities	0.10
+Exams	Humanities	0.40
+Tests	Engineering	0.20
+Group projects	Engineering	0.20
+Exams	Engineering	0.40
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Labs	Other	0.01
+Labs	Other	0.02
+Labs	Other	0.01
+Labs	Other	0.02
+Labs	Other	0.02
+Labs	Other	0.02
+Tests	Other	0.15
+Exams	Other	0.35
+Group projects	Other	0.05
+Group projects	Other	0.05
+Group projects	Other	0.10
+Group projects	Other	0.20
+Exams	Engineering	0.40
+Tests	Engineering	0.20
+Tests	Engineering	0.20
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Tests	Engineering	0.30
+Exams	Engineering	0.40
+Labs	Engineering	0.06
+Labs	Engineering	0.06
+Labs	Engineering	0.06
+Labs	Engineering	0.06
+Problem sets	Engineering	0.00
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Problem sets	Engineering	0.01
+Tests	Engineering	0.30
+Problem sets	Engineering	0.05
+Problem sets	Engineering	0.05
+Exams	Engineering	0.45
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Labs	Engineering	0.04
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.04
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.03
+Problem sets	Engineering	0.02
+Problem sets	Engineering	0.04
+Problem sets	Engineering	0.02
+Quizzes	Engineering	0.08
+Quizzes	Engineering	0.08
+Quizzes	Engineering	0.08
+Quizzes	Engineering	0.08
+Exams	Engineering	0.50
+Other	Engineering	0.02
+Problem sets	Engineering	0.03
+Problem sets	Engineering	0.03
+Problem sets	Engineering	0.03
+Problem sets	Engineering	0.03
+Problem sets	Engineering	0.03
+Other	Engineering	0.10
+Papers	Engineering	0.10
+Papers	Engineering	0.00
+Tests	Engineering	0.25
+Exams	Engineering	0.40
+Other	Humanities	0.10
+Tests	Humanities	0.15
+Tests	Humanities	0.20
+Group projects	Humanities	0.15
+Exams	Humanities	0.40
+Problem sets	Other	0.02
+Problem sets	Other	0.00
+Problem sets	Other	0.02
+Problem sets	Other	0.02
+Problem sets	Other	0.02
+Problem sets	Other	0.02
+Tests	Other	0.25
+Tests	Other	0.25
+Exams	Other	0.40
+Group projects	Project	0.05
+Group projects	Project	0.10
+Group projects	Project	0.68
+Other	Project	0.02
+Papers	Project	0.15
+Papers	Engineering	0.05
+Problem sets	Engineering	0.05
+Group projects	Engineering	0.15
+Group projects	Engineering	0.10
+Tests	Engineering	0.20
+Exams	Engineering	0.45
+Labs	Project	0.10
+Labs	Project	0.05
+Labs	Project	0.05
+Tests	Project	0.15
+Group projects	Project	0.06
+Group projects	Project	0.04
+Group projects	Project	0.06
+Group projects	Project	0.04
+Group projects	Project	0.01
+Group projects	Project	0.01
+Group projects	Project	0.01
+Group projects	Project	0.01
+Group projects	Project	0.01
+Group projects	Project	0.01
+Group projects	Project	0.01
+Group projects	Project	0.20
+Group projects	Project	0.10
+Papers	Project	0.05
+Other	Other	0.05
+Other	Other	0.10
+Tests	Other	0.20
+Tests	Other	0.20
+Exams	Other	0.45
+Papers	Humanities	0.05
+Papers	Humanities	0.10
+Group projects	Humanities	0.05
+Group projects	Humanities	0.05
+Group projects	Humanities	0.03
+Papers	Humanities	0.05
+Group projects	Humanities	0.05
+Papers	Humanities	0.05
+Group projects	Humanities	0.05
+Papers	Humanities	0.05
+Group projects	Humanities	0.15
+Group projects	Humanities	0.15
+Group projects	Humanities	0.03
+Other	Humanities	0.05
+Other	Humanities	0.10
+Papers	Project	0.05
+Papers	Project	0.10
+Other	Project	0.10
+Papers	Project	0.75

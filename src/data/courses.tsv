@@ -1,0 +1,47 @@
+Course Code	Term	Type	Name
+ESC101	1	Project	Eng Design 1
+ESC103	1	Math	Lin Alg 1
+ESC180	1	Eng Fund.	Coding 1
+ESC194	1	Math	Calc 1
+CIV102	1	Eng Fund.	Civil Eng
+PHY180	1	Science	Physics 1
+ECE159	2	Eng Fund.	Circuits
+ESC102	2	Project	Eng Design 2
+ESC190	2	Eng Fund.	Coding 2
+ESC195	2	Math	Calc 2
+MAT185	2	Math	Lin Alg 2
+MSE160	2	Science	Material Sc.
+AER210	3	Eng Fund.	Calc 3+Fluids
+MAT292	3	Math	Lin Alg 3
+CHE260	3	Eng Fund.	Thermo
+ESC203	3	Other (humanities)	Eng&Society
+PHY293	3	Science	Physics 2
+ECE253	3	Eng Fund.	Coding 3
+BME205	4	Science	Bio
+PHY294	4	Science	Physics 3
+ECE286	4	Math	Statistics
+CHE374	4	Other (technical)	Eng Econ
+ECE259	4	Science	Electro Mag
+TEP322	4	Other (humanities)	Language & Power
+ECE349	5	Eng Spec.	Energy Sys.
+ECE360	5	Eng Spec.	Electronics
+ECE367	5	Math	Matrix Alg
+ESC204	5	Project	Eng Design 3
+TEP343	5	Other (humanities)	Eng Leadership
+MIE303	5	Eng Spec.	Eng Thermo
+APS305	6	Other (humanities)	Energy Policy
+CHE469	6	Eng Spec.	Electrochem
+APS360	6	Other (technical)	Machine Learning
+ECE313	6	Eng Spec.	Energy Dist.
+ECE356	6	Eng Spec.	Control theory
+ECE463	6	Eng Spec.	Electric Drives
+AER507	7	Eng Spec.	Fusion
+MIE515	7	Eng Spec.	Renewables
+TEP327	7	Other (humanities)	Eng & Law
+ECO101	7	Other (technical)	Micro Econ
+ESC470	7	Project	Capstone
+CIV401	8	Eng Spec.	Hydro
+ECE532	8	Project	Digital Sys.
+ECO102	8	Other (technical)	Macro Econ
+TEP448	8	Other (humanities)	Sys. Mapping
+ESC499	8	Project	Thesis
