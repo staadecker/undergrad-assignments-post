@@ -212,11 +212,11 @@ There's a lot more I would've liked to discuss, including insights on how _I_ pe
 
 There is also the sought-after question of how big is the curve? Unfortunately, professors rarely share the final exam grades (or sometimes include the curve directly in the exam grade) so it is often impossible to answer the question precisely. Still, in the 11 courses where I could make an estimate, my final grade was 0 to 12% higher than expected due to the curve[^5] (median of 2%).
 
-[^5]: The 12% curve was in Prof. Davis' infamous Calculus 1!
+[^5]: The 12% curve was in Prof. Davis's infamous Calculus 1!
 
 ## Appendix: Methodology
 
-I dream of the day where my data will be orderly, clean and free of inconsistencies or edge cases.
+I dream of the day when my data will be orderly, clean and free of inconsistencies or edge cases.
 Unfortunately, I have not experienced such a day. I spent several hours transcribing all my data into the two neat tables shown below.
 
 ![Screenshot of the two tables that form the dataset](./data/input_tables_blurred.png)
