@@ -15,9 +15,10 @@ jobs:
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - name: Deploy to Observable Cloud
-        # This parameter to `--message` will use the latest commit message
-        run: yarn deploy -- --message "$(git log -1 --pretty=%s)"
-        env:
-          # Authentication information. See below for how to set this up.
-          OBSERVABLE_TOKEN: ${{ secrets.OBSERVABLE_TOKEN }}
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
