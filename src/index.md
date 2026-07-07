@@ -208,7 +208,7 @@ As shown, group projects and written assignments make up a significant part of t
 
 ## Final thoughts
 
-There's a lot more I would've liked to discuss, including insights on how _I_ perform rather than just what types of assignments and courses engineering students take. (Spoiler: I did best on problem sets, labs, and fundamental engineering courses while I did worst on exams, tests, group projects, and humanities-like courses, although maybe that is just because the grading one the later is stiffer?)
+There's a lot more I would've liked to discuss, including insights on how _I_ perform rather than just what types of assignments and courses engineering students take. (Spoiler: I did best on problem sets, labs, and fundamental engineering courses while I did worst on exams, tests, group projects, and humanities-like courses, although maybe that is just because the grading on the later is stiffer?)
 
 There is also the sought-after question of how big is the curve? Unfortunately, professors rarely share the final exam grades (or sometimes include the curve directly in the exam grade) so it is often impossible to answer the question precisely. Still, in the 11 courses where I could make an estimate, my final grade was 0 to 12% higher than expected due to the curve[^5] (median of 2%).
 
